@@ -45,7 +45,59 @@ Completed ✅
 
 
 ### Week 2 – Vulnerability Assessment
-Status: Planned
+📌 Objective
+
+To simulate malware activity using the EICAR test file and analyze Windows Defender alerts using Splunk SIEM.
+
+This project demonstrates endpoint monitoring, SIEM log ingestion, and malware incident analysis.
+
+🛠️ Tools Used
+
+Windows 10 VM (VirtualBox)
+
+Windows Defender
+
+Splunk Enterprise
+
+EICAR Test File
+
+🔍 Project Workflow
+
+Set up Windows virtual machine.
+
+Enabled Windows Defender.
+
+Generated malware alert using EICAR test file.
+
+Verified detection in Event Viewer (Event ID 1116).
+
+Configured Splunk to ingest Defender logs.
+
+Resolved permission issues.
+
+Analyzed malware events in Splunk.
+
+Documented findings.
+
+📊 Splunk Queries Used index=* EventCode=1116
+
+index=* "Windows Defender"
+
+📈 Key Learnings
+
+Endpoint security monitoring
+
+SIEM log onboarding
+
+Windows permission management
+
+Malware investigation
+
+Incident response workflow
+
+Successfully detected and analyzed malware alerts using SIEM and documented the incident professionally.
+
+Status: Completed ✅
 
 ### Week 3 – Incident Response Simulation
 Status: Planned
