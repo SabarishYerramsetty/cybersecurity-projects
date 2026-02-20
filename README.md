@@ -12,49 +12,71 @@ This repository contains hands-on cybersecurity projects focused on:
 
 Week 1 – SIEM Log Analysis
 Brute Force Detection – Windows + SIEM
-
 Overview
-•	Detect brute-force login attempts using Windows Event Logs.
-•	Analyze authentication failures using SIEM monitoring.
+
+Detect brute-force login attempts using Windows Event Logs
+
+Analyze authentication failures using SIEM monitoring
 
 Environment
-•	Windows 10 VM
-•	VirtualBox
-•	SIEM platform
+
+Windows 10 VM
+
+VirtualBox
+
+SIEM platform
 
 Attack / Activity Simulation
-•	Created attacker account.
-•	Performed multiple failed login attempts.
-•	Generated Windows Event ID 4625 (failed logon).
+
+Created attacker account
+
+Performed multiple failed login attempts
+
+Generated Windows Event ID 4625 (failed logon)
 
 Detection / Analysis
-•	Ingested Windows security logs into SIEM.
-•	Queried failed authentication events.
 
-Search Query:
-•	index=* EventCode=4625
+Ingested Windows security logs into SIEM
+
+Queried failed authentication events
+
+Search Query
+
+index=* EventCode=4625
 
 Findings
-•	Detected multiple failed login attempts.
-•	Identified targeted account activity within a short time window.
-•	Confirmed brute-force behavior pattern.
+
+Detected multiple failed login attempts
+
+Identified targeted account activity within a short time window
+
+Confirmed brute-force behavior pattern
 
 Skills Demonstrated
-•	SIEM configuration
-•	Log analysis
-•	Security monitoring
-•	Incident detection
-•	Authentication event investigation
+
+SIEM configuration
+
+Log analysis
+
+Security monitoring
+
+Incident detection
+
+Authentication event investigation
 
 Key Learnings
-•	Understanding Windows authentication logs
-•	Identifying brute-force attack indicators
-•	SIEM search and filtering techniques
-•	Basic SOC monitoring workflow
+
+Understanding Windows authentication logs
+
+Identifying brute-force attack indicators
+
+SIEM search and filtering techniques
+
+Basic SOC monitoring workflow
 
 Status
-•	Completed ✅
 
+Completed ✅
 ________________________________________
 
 Week 2 – Vulnerability Assessment
