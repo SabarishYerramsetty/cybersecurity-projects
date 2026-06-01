@@ -1,6 +1,6 @@
 # Phishing Email Forensics Analysis
 
-**MITRE ATT&CK:** T1566.001 — Spearphishing via Email  
+**MITRE ATT&CK:** T1566.001 : Spearphishing via Email  
 **Tools Used:** MXToolbox, AbuseIPDB, VirusTotal, DomainTools WHOIS  
 **Verdict:** Phishing Confirmed, High Confidence  
 
