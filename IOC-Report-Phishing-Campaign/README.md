@@ -1,6 +1,6 @@
 # IOC Report: Banco Bradesco Phishing Campaign
 
-**MITRE ATT&CK:** T1566.001 — Spearphishing via Email  
+**MITRE ATT&CK:** T1566.001 : Spearphishing via Email  
 **Tools Used:** ThreatFox, Shodan, URLScan, AbuseIPDB, VirusTotal  
 **Threat Status:** Active IP, Sender Domain Offline  
 
