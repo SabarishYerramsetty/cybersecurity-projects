@@ -1,184 +1,82 @@
 # Cybersecurity Projects Portfolio
 
-Hands-on cybersecurity projects focused on:
+Hands-on cybersecurity projects documenting real investigations, detections, and threat analysis. Each project follows the same workflow a SOC analyst would use on the job.
 
-- SOC Operations
-- Incident Response
-- Threat Hunting
-- Vulnerability Management
-- Risk Assessment
+**Analyst:** Sai Naga Sabarish Yerramsetty  
+**Focus Areas:** SOC Operations, Threat Intelligence, Incident Response, Network Analysis, Phishing Forensics  
+**Connect:** [LinkedIn](https://www.linkedin.com/in/sai-naga-sabarish-yerramsetty-617013210) | [GitHub](https://github.com/SabarishYerramsetty/cybersecurity-projects)
 
 ---
 
-## Week 1 – SIEM Log Analysis  
-### Brute Force Detection – Windows + SIEM
+## Projects
 
-### Overview
-- Detect brute-force login attempts using Windows Event Logs
-- Analyze authentication failures using SIEM monitoring
+### 1. Brute Force Detection
+**Folder:** `SIEM-Brute-Force-Detection`  
+**Tools:** Windows Event Logs, SIEM  
+**MITRE ATT&CK:** T1110 - Brute Force  
 
-### Environment
-- Windows 10 VM
-- VirtualBox
-- SIEM platform
+Detected brute-force login attempts by analyzing Windows authentication failures. Simulated an attacker performing multiple failed login attempts, ingested Event ID 4625 logs into a SIEM, and identified the attack pattern through log queries.
 
-### Attack / Activity Simulation
-- Created attacker account
-- Performed multiple failed login attempts
-- Generated Windows Event ID 4625 (failed logon)
-
-### Detection / Analysis
-- Ingested Windows security logs into SIEM
-- Queried failed authentication events
-
-**Search Query**
-index=* EventCode=4625
-
-
-### Findings
-- Detected multiple failed login attempts
-- Identified targeted account activity within a short time window
-- Confirmed brute-force behavior pattern
-
-### Skills Demonstrated
-- SIEM configuration
-- Log analysis
-- Security monitoring
-- Incident detection
-- Authentication event investigation
-
-### Key Learnings
-- Understanding Windows authentication logs
-- Identifying brute-force attack indicators
-- SIEM search and filtering techniques
-- Basic SOC monitoring workflow
-
-### Status
-- Completed ✅
+**Skills:** SIEM configuration, log analysis, authentication event investigation, incident detection
 
 ---
 
-## Week 2 – Vulnerability Assessment  
-### Malware Detection – Endpoint Security + SIEM
+### 2. Malware Detection
+**Folder:** `Malware-Traffic-Analysis-Lab`  
+**Tools:** Windows Defender, Splunk, EICAR Test File  
+**MITRE ATT&CK:** T1204 - User Execution  
 
-### Overview
-- Simulate malware activity using a safe test file
-- Monitor endpoint security alerts
-- Investigate detection using SIEM logs
+Simulated malware activity using an EICAR test file, triggered a Windows Defender alert, and investigated the detection event in Splunk. Verified the full detection pipeline from endpoint alert to SIEM visibility.
 
-### Environment
-- Windows 10 VM
-- VirtualBox
-- Windows Defender
-- Splunk Enterprise
-- EICAR Test File
-
-### Attack / Activity Simulation
-- Downloaded EICAR malware simulation file
-- Triggered Windows Defender security alert
-- Verified detection in Windows Event Viewer (Event ID 1116)
-
-### Detection / Analysis
-
-**Endpoint Detection**
-- Windows Defender identified file as malicious
-- Generated security alert in Windows logs
-
-**SIEM Analysis**
-- Ingested Windows Defender logs into Splunk
-- Resolved log permission issues
-- Investigated malware detection events
-
-**Search Queries**
-index=* EventCode=1116
-index=* "Windows Defender"
-
-
-### Findings
-- Malware simulation successfully detected
-- Alert visibility confirmed in SIEM
-- Verified proper log ingestion and monitoring workflow
-
-### Skills Demonstrated
-- Endpoint security monitoring
-- SIEM log ingestion and troubleshooting
-- Malware alert investigation
-- Incident response workflow
-- Security event correlation
-
-### Key Learnings
-- How antivirus detection works
-- Onboarding endpoint logs into SIEM
-- Managing Windows log permissions
-- Investigating malware alerts in SOC workflow
-- Incident documentation practices
-
-### Status
-- Completed ✅
+**Skills:** Endpoint security monitoring, SIEM log ingestion, malware alert investigation, incident response workflow
 
 ---
 
-## Week 3 – Incident Response Simulation  
-### Network Traffic Analysis – Wireshark + Splunk
+### 3. Network Traffic Analysis
+**Folder:** `Network-Threat-Hunting-Wireshark`  
+**Tools:** Wireshark, Splunk, Kali Linux, Windows 10 VM  
+**MITRE ATT&CK:** T1040 - Network Sniffing  
 
-### Overview
-- Capture and analyze network traffic
-- Detect suspicious communication patterns
-- Perform network-based incident investigation
+Captured live network traffic between virtual machines using Wireshark, analyzed PCAP files for suspicious communication patterns, and correlated findings in Splunk. Identified abnormal connection attempts and unusual protocols.
 
-### Environment
-- Kali Linux VM
-- Windows 10 VM
-- VirtualBox
-- Wireshark
-- Splunk Enterprise
+**Skills:** Packet inspection, PCAP analysis, Wireshark filtering, network log correlation, SOC investigation workflow
 
-### Attack / Activity Simulation
-- Generated network activity between virtual machines
-- Captured packets using Wireshark
-- Exported captured traffic as PCAP files
+---
 
-### Detection / Analysis
+### 4. Phishing Email Forensics
+**Folder:** `Phishing-Email-Forensics`  
+**Tools:** MXToolbox, AbuseIPDB, VirusTotal, DomainTools WHOIS  
+**MITRE ATT&CK:** T1566.001 - Spearphishing via Email  
 
-**Packet Analysis**
-- Inspected captured network packets
-- Applied filters to identify suspicious traffic
-- Observed unusual connections and protocols
+Conducted a full forensic investigation of a real phishing email impersonating Banco Bradesco, one of Brazil's largest banks. Analyzed raw email headers, traced the originating IP through multiple threat intelligence platforms, and performed WHOIS lookup on the sender domain. All three email authentication checks (SPF, DKIM, DMARC) failed. Confirmed the email originated from a DigitalOcean VPS with no affiliation to Banco Bradesco.
 
-**SIEM Analysis**
-- Imported PCAP-related data into Splunk
-- Correlated network traffic with system activity
+**Skills:** Email header analysis, IP reputation analysis, OSINT, WHOIS lookup, IOC identification, MITRE ATT&CK mapping
 
-**Search Queries**
-index=*
-sourcetype=pcap
+---
 
+### 5. IOC Report Writing
+**Folder:** `IOC-Report-Phishing-Campaign`  
+**Tools:** ThreatFox, Shodan, URLScan, STIX 2.1  
+**MITRE ATT&CK:** T1566.001 - Spearphishing via Email  
 
-### Findings
-- Identified abnormal network behavior
-- Detected unusual connection attempts
-- Correlated packet data with potential threats
+Built a structured threat intelligence report from the indicators discovered in the phishing investigation. Enriched each IOC through Shodan, ThreatFox, and URLScan. Discovered the server was still active as of June 2026 with SSH publicly exposed, and that the phishing content was likely served from Amazon S3 buckets. Formatted IOCs in STIX 2.1 and wrote detection rules for the email gateway, firewall, and SIEM.
 
-### Skills Demonstrated
-- Network traffic monitoring
-- Packet inspection
-- PCAP analysis
-- Log correlation
-- Incident investigation
-- SOC network analysis
+**Skills:** Threat intelligence, IOC enrichment, Shodan reconnaissance, STIX 2.1, detection rule writing, ThreatFox, URLScan
 
-### Key Learnings
-- Understanding packet-level investigations
-- Detecting abnormal network behavior
-- Using Wireshark filters for analysis
-- Integrating network data into SIEM
-- Real-world SOC investigation workflow
+---
 
-### Status
-- Completed ✅
+## Skills Across All Projects
 
-### Week 4 – Threat Hunting (MITRE ATT&CK)
-Status: Planned
+| Category | Tools and Techniques |
+|---|---|
+| SIEM | Splunk, Windows Event Logs, log ingestion, search queries |
+| Network Analysis | Wireshark, PCAP analysis, packet filtering, traffic correlation |
+| Threat Intelligence | ThreatFox, Shodan, URLScan, AbuseIPDB, VirusTotal, WHOIS |
+| Email Forensics | MXToolbox, SPF/DKIM/DMARC analysis, header analysis |
+| Frameworks | MITRE ATT&CK, STIX 2.1, TAXII |
+| Endpoint Security | Windows Defender, Event ID analysis, malware detection |
 
+---
 
-Maintained by: Sai Naga Sabarish Yerramsetty
+*All projects include full write-ups, screenshots, and investigation reports.*  
+*Connect on [LinkedIn](https://www.linkedin.com/in/sai-naga-sabarish-yerramsetty-617013210)*
