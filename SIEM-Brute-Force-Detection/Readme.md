@@ -65,7 +65,7 @@ This query searches for failed login events, counts them by source IP and userna
 ---
  
 *Part of my SOC Analyst portfolio.*  
-*Connect on [LinkedIn](https://www.linkedin.com/in/sai-naga-sabarish-yerramsetty-617013210)*
+*Connect on [LinkedIn](https://www.linkedin.com/in/sabarishy/)*
  
 ---
 ---
