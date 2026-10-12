@@ -83,6 +83,8 @@ Playbooks included:
 ### 7. Disaster Recovery and Business Continuity Plan
 **Folder:** `DR-BCP-Healthcare-IT`  
 **Type:** GRC Documentation  
+**Course:** CYBER 5050 - Disaster Recovery and Business Continuity, University of Central Missouri  
+**Instructor:** Dr. Richard Morphy  
 **Frameworks:** NIST SP 800-34, HIPAA, ISO 22301  
 
 A full Disaster Recovery and Business Continuity Plan developed for a healthcare IT environment. Covers risk assessment, business impact analysis, emergency response, communication planning, recovery strategies, backup and restoration procedures, and testing. Demonstrates understanding of RTO, RPO, MTD, and BIA in a regulated healthcare context.
@@ -94,6 +96,8 @@ A full Disaster Recovery and Business Continuity Plan developed for a healthcare
 ### 8. Security Policies and Standards
 **Folder:** `Security-Policies-and-Standards`  
 **Type:** GRC Documentation  
+**Course:** CYBR 5720 - Cyber Security Policies and Risk Management, University of Central Missouri  
+**Instructor:** Dr. Richard Morphy  
 **Frameworks:** NIST CSF, ISO 27001, CIS Controls  
 
 A set of enterprise-grade security policies, standards, and procedures covering acceptable use, asset management, logging requirements, and information disposal. Demonstrates the ability to write clear and enforceable governance documentation, a core skill in GRC, IAM, and risk roles.
