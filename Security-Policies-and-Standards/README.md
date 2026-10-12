@@ -2,6 +2,8 @@
 
 **Institution:** University of Central Missouri  
 **Program:** M.S. Cybersecurity  
+**Course:** CYBR 5720 - Cyber Security Policies and Risk Management  
+**Instructor:** Dr. Richard Morphy  
 **Type:** GRC Documentation  
 **Frameworks Referenced:** NIST CSF, ISO 27001, CIS Controls  
 
@@ -52,5 +54,5 @@ For GRC roles, the ability to write clear and enforceable policy documents is a 
 
 ---
 
-*Developed as part of the M.S. Cybersecurity program at the University of Central Missouri.*  
+*Developed as part of CYBR 5720 - Cyber Security Policies and Risk Management at the University of Central Missouri.*  
 *Connect on [LinkedIn](https://www.linkedin.com/in/sabarishy/)*
