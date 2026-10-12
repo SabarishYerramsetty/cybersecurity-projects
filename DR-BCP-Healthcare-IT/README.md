@@ -2,6 +2,7 @@
 
 **Course:** CYBER 5050 - Disaster Recovery and Business Continuity  
 **Institution:** University of Central Missouri  
+**Instructor:** Dr. Richard Morphy  
 **Sector:** Healthcare IT  
 **Frameworks Referenced:** NIST SP 800-34, HIPAA, ISO 22301  
 
@@ -56,5 +57,5 @@ Healthcare IT is one of the most attacked sectors and one of the most regulated.
 
 ---
 
-*Developed as part of CYBER 5050 coursework at the University of Central Missouri.*  
+*Developed as part of CYBER 5050 - Disaster Recovery and Business Continuity at the University of Central Missouri.*  
 *Connect on [LinkedIn](https://www.linkedin.com/in/sabarishy/)*
